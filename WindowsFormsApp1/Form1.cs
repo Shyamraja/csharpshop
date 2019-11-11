@@ -17,9 +17,26 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            radioButton1.ForeColor = System.Drawing.Color.Green;
+            radioButton2.ForeColor = System.Drawing.Color.Red;
+            
+            cab_items.Items.Clear();
+            cab_items.Items.Add("A");
+        
+        
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton1.ForeColor = System.Drawing.Color.Red;
+            radioButton2.ForeColor = System.Drawing.Color.Green;
+            
+            cab_items.Items.Add("B");
+        
+        }
+    
+    
     }
 }
