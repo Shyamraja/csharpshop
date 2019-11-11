@@ -19,22 +19,26 @@ namespace WindowsFormsApp1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            radioButton1.ForeColor = System.Drawing.Color.Green;
-            radioButton2.ForeColor = System.Drawing.Color.Red;
-            
-            cab_items.Items.Clear();
-            cab_items.Items.Add("A");
-        
-        
+           radioButton1.ForeColor = System.Drawing.Color.Green;
+           radioButton2.ForeColor = System.Drawing.Color.Blue;
+
+            cmb_items.Items.Clear();
+            cmb_items.Items.Add("Cadbury");
+            cmb_items.Items.Add("Dairymilk");
+            cmb_items.Items.Add("Stingers");
+            cmb_items.Items.Add("Chocopie");
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             radioButton1.ForeColor = System.Drawing.Color.Red;
-            radioButton2.ForeColor = System.Drawing.Color.Green;
+            radioButton2.ForeColor = System.Drawing.Color.Blue;
             
-            cab_items.Items.Add("B");
-        
+            cmb_items.Items.Clear();
+            cmb_items.Items.Add("Car");
+            cmb_items.Items.Add("Doll");
+            cmb_items.Items.Add("Bike");
+            cmb_items.Items.Add("Loader");
         }
     
     

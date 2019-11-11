@@ -97,7 +97,7 @@
             this.radioButton1.Size = new System.Drawing.Size(74, 21);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Sweets";
+            this.radioButton1.Text = "SWEETS";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -109,7 +109,7 @@
             this.radioButton2.Size = new System.Drawing.Size(99, 21);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Chocolates";
+            this.radioButton2.Text = "TOYS";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // txt_price
