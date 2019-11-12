@@ -79,5 +79,11 @@ namespace Shop_System
                 txt_price.Text = "0";
             }
         }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_qty.Text.Length > 0)
+            {
+                txt_total.Text = (Convert.ToInt16(txt_price.Text) * Convert.ToInt16(txt_qty.Text)).ToString();
+            }
     }
 }
