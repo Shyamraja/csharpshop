@@ -78,12 +78,29 @@ namespace Shop_System
             {
                 txt_price.Text = "0";
             }
+              txt_total.Text = "";
+              txt_qty.Text = "";
         }
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (txt_qty.Text.Length > 0)
             {
                 txt_total.Text = (Convert.ToInt16(txt_price.Text) * Convert.ToInt16(txt_qty.Text)).ToString();
             }
+        
+         private void button1_Click(object sender, EventArgs e)
+        {
+            string[] arr = new string[4];
+            arr[0] = cmb_items.SelectedItem.ToString();
+            arr[1] = txt_price.Text;
+            arr[2] = txt_qty.Text;
+            arr[3] = txt_total.Text;
+
+            ListViewItem lvi = new ListViewItem(arr);
+            listView1.Items.Add(lvi);
+
+         
+        }
     }
 }
