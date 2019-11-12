@@ -118,7 +118,22 @@ namespace Shop_System
                  txt_balance.Text = (Convert.ToInt16(txt_net.Text) - Convert.ToInt16(txt_paid.Text)).ToString();
             }
         }
-
+        
+        //Function added fro removing items from list 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                for (int i= 0; i< listView1.Items.Count; i++)
+                {
+                    if (listView1.Items[i].Selected)
+                    {
+                        txt_subtotal.Text = (Convert.ToInt16(txt_subtotal.Text) - Convert.ToInt16(listView1.Items[i].SubItems[3].Text)).ToString();
+                        listView1.Items[i].Remove();
+                    }
+                }
+            }
+        }
         
         
     }
