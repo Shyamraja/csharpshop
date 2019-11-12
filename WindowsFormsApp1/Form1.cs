@@ -99,8 +99,27 @@ namespace Shop_System
 
             ListViewItem lvi = new ListViewItem(arr);
             listView1.Items.Add(lvi);
-
-         
+       //Add different items ,quantity and  their total price in list
+         txt_subtotal.Text = (Convert.ToInt16(txt_subtotal.Text) + Convert.ToInt16(txt_total.Text)).ToString();
+        //calculates subtotal of items price after adding total price for every different items
         }
+
+         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_discount.Text.Length > 0)
+            {
+                txt_net.Text = (Convert.ToInt16(txt_subtotal.Text) - Convert.ToInt16(txt_discount.Text)).ToString();
+            }
+
+        private void txt_paid_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_paid.Text.Length > 0)
+            {
+                 txt_balance.Text = (Convert.ToInt16(txt_net.Text) - Convert.ToInt16(txt_paid.Text)).ToString();
+            }
+        }
+
+        
+        
     }
 }
