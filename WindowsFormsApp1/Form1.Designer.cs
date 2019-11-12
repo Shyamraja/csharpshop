@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Shop_System
 {
     partial class Form1
     {
@@ -32,40 +32,40 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmb_items = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.sweets = new System.Windows.Forms.RadioButton();
+            this.toys = new System.Windows.Forms.RadioButton();
             this.txt_price = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.price = new System.Windows.Forms.Label();
+            this.Quantity = new System.Windows.Forms.Label();
+            this.txt_qty = new System.Windows.Forms.TextBox();
+            this.Total = new System.Windows.Forms.Label();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.additem = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.text_sub = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txt_subtotal = new System.Windows.Forms.TextBox();
+            this.subtotal = new System.Windows.Forms.Label();
+            this.discount = new System.Windows.Forms.Label();
             this.txt_discount = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Net = new System.Windows.Forms.Label();
             this.txt_net = new System.Windows.Forms.TextBox();
+            this.paid = new System.Windows.Forms.Label();
             this.txt_paid = new System.Windows.Forms.TextBox();
+            this.balance = new System.Windows.Forms.Label();
             this.txt_balance = new System.Windows.Forms.TextBox();
+            this.removeitem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(41, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(69, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(635, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(510, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -73,106 +73,106 @@
             // cmb_items
             // 
             this.cmb_items.FormattingEnabled = true;
-            this.cmb_items.Location = new System.Drawing.Point(403, 198);
-            this.cmb_items.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_items.Location = new System.Drawing.Point(302, 158);
             this.cmb_items.Name = "cmb_items";
-            this.cmb_items.Size = new System.Drawing.Size(292, 24);
+            this.cmb_items.Size = new System.Drawing.Size(277, 24);
             this.cmb_items.TabIndex = 1;
+            this.cmb_items.SelectedIndexChanged += new System.EventHandler(this.cmb_items_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 199);
+            this.label1.Location = new System.Drawing.Point(173, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "select items";
+            this.label1.Text = "Select Item";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // radioButton1
+            // sweets
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(403, 171);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(74, 21);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "SWEETS";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.sweets.AutoSize = true;
+            this.sweets.Location = new System.Drawing.Point(293, 123);
+            this.sweets.Name = "sweets";
+            this.sweets.Size = new System.Drawing.Size(87, 21);
+            this.sweets.TabIndex = 3;
+            this.sweets.TabStop = true;
+            this.sweets.Text = "SWEETS";
+            this.sweets.UseVisualStyleBackColor = true;
+            this.sweets.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // toys
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(540, 170);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(99, 21);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "TOYS";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.toys.AutoSize = true;
+            this.toys.Location = new System.Drawing.Point(439, 123);
+            this.toys.Name = "toys";
+            this.toys.Size = new System.Drawing.Size(67, 21);
+            this.toys.TabIndex = 4;
+            this.toys.TabStop = true;
+            this.toys.Text = "TOYS\n";
+            this.toys.UseVisualStyleBackColor = true;
+            this.toys.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // txt_price
             // 
-            this.txt_price.Location = new System.Drawing.Point(85, 278);
-            this.txt_price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_price.Location = new System.Drawing.Point(100, 225);
             this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(105, 22);
+            this.txt_price.Size = new System.Drawing.Size(83, 22);
             this.txt_price.TabIndex = 5;
             // 
-            // label2
+            // price
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Price";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.price.AutoSize = true;
+            this.price.Location = new System.Drawing.Point(108, 205);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(40, 17);
+            this.price.TabIndex = 6;
+            this.price.Text = "Price";
+            this.price.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // Quantity
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(263, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Quantity";
+            this.Quantity.AutoSize = true;
+            this.Quantity.Location = new System.Drawing.Point(220, 205);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(30, 17);
+            this.Quantity.TabIndex = 8;
+            this.Quantity.Text = "Qty";
+            this.Quantity.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // txt_qty
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 278);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 22);
-            this.textBox2.TabIndex = 7;
+            this.txt_qty.Location = new System.Drawing.Point(199, 225);
+            this.txt_qty.Name = "txt_qty";
+            this.txt_qty.Size = new System.Drawing.Size(71, 22);
+            this.txt_qty.TabIndex = 7;
+            this.txt_qty.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label4
+            // Total
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(391, 247);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "TotalPrice";
+            this.Total.AutoSize = true;
+            this.Total.Location = new System.Drawing.Point(318, 205);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(40, 17);
+            this.Total.TabIndex = 10;
+            this.Total.Text = "Total";
             // 
-            // textBox3
+            // txt_total
             // 
-            this.textBox3.Location = new System.Drawing.Point(380, 278);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(111, 22);
-            this.textBox3.TabIndex = 9;
+            this.txt_total.Location = new System.Drawing.Point(276, 226);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(89, 22);
+            this.txt_total.TabIndex = 9;
             // 
-            // button1
+            // additem
             // 
-            this.button1.Location = new System.Drawing.Point(549, 278);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Add Item";
-            this.button1.UseVisualStyleBackColor = true;
+            this.additem.Location = new System.Drawing.Point(371, 221);
+            this.additem.Name = "additem";
+            this.additem.Size = new System.Drawing.Size(91, 32);
+            this.additem.TabIndex = 11;
+            this.additem.Text = "Add Item\r\n\r\n";
+            this.additem.UseVisualStyleBackColor = true;
+            this.additem.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
             // 
@@ -182,10 +182,9 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(85, 343);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Location = new System.Drawing.Point(90, 284);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(553, 82);
+            this.listView1.Size = new System.Drawing.Size(511, 144);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -193,139 +192,149 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Item Name";
-            this.columnHeader1.Width = 250;
+            this.columnHeader1.Width = 180;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Price";
-            this.columnHeader2.Width = 75;
+            this.columnHeader2.Width = 65;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Quantity";
-            this.columnHeader3.Width = 75;
+            this.columnHeader3.Text = "Qty";
+            this.columnHeader3.Width = 65;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Total";
-            this.columnHeader4.Width = 75;
+            this.columnHeader4.Width = 65;
             // 
-            // text_sub
+            // txt_subtotal
             // 
-            this.text_sub.Location = new System.Drawing.Point(157, 444);
-            this.text_sub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.text_sub.Name = "text_sub";
-            this.text_sub.Size = new System.Drawing.Size(92, 22);
-            this.text_sub.TabIndex = 13;
+            this.txt_subtotal.Location = new System.Drawing.Point(137, 449);
+            this.txt_subtotal.Name = "txt_subtotal";
+            this.txt_subtotal.Size = new System.Drawing.Size(77, 22);
+            this.txt_subtotal.TabIndex = 13;
+            this.txt_subtotal.Text = "0";
             // 
-            // label5
+            // subtotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(83, 447);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Sub Total";
+            this.subtotal.AutoSize = true;
+            this.subtotal.Location = new System.Drawing.Point(66, 454);
+            this.subtotal.Name = "subtotal";
+            this.subtotal.Size = new System.Drawing.Size(69, 17);
+            this.subtotal.TabIndex = 14;
+            this.subtotal.Text = "Sub Total";
             // 
-            // label6
+            // discount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(261, 449);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Discount";
+            this.discount.AutoSize = true;
+            this.discount.Location = new System.Drawing.Point(229, 452);
+            this.discount.Name = "discount";
+            this.discount.Size = new System.Drawing.Size(63, 17);
+            this.discount.TabIndex = 16;
+            this.discount.Text = "Discount\r\n";
+            this.discount.Click += new System.EventHandler(this.label6_Click);
             // 
             // txt_discount
             // 
-            this.txt_discount.Location = new System.Drawing.Point(336, 444);
-            this.txt_discount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_discount.Location = new System.Drawing.Point(302, 447);
             this.txt_discount.Name = "txt_discount";
-            this.txt_discount.Size = new System.Drawing.Size(92, 22);
-            this.txt_discount.TabIndex = 16;
+            this.txt_discount.Size = new System.Drawing.Size(89, 22);
+            this.txt_discount.TabIndex = 15;
+            this.txt_discount.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // label7
+            // Net
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(497, 447);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 17);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Net";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(491, 475);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 17);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Paid";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(468, 508);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 17);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Balance";
+            this.Net.AutoSize = true;
+            this.Net.Location = new System.Drawing.Point(470, 454);
+            this.Net.Name = "Net";
+            this.Net.Size = new System.Drawing.Size(30, 17);
+            this.Net.TabIndex = 18;
+            this.Net.Text = "Net\r\n";
             // 
             // txt_net
             // 
-            this.txt_net.Location = new System.Drawing.Point(547, 444);
-            this.txt_net.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_net.Location = new System.Drawing.Point(531, 447);
             this.txt_net.Name = "txt_net";
-            this.txt_net.Size = new System.Drawing.Size(92, 22);
-            this.txt_net.TabIndex = 20;
+            this.txt_net.Size = new System.Drawing.Size(70, 22);
+            this.txt_net.TabIndex = 17;
+            // 
+            // paid
+            // 
+            this.paid.AutoSize = true;
+            this.paid.Location = new System.Drawing.Point(470, 508);
+            this.paid.Name = "paid";
+            this.paid.Size = new System.Drawing.Size(36, 17);
+            this.paid.TabIndex = 20;
+            this.paid.Text = "Paid\r\n";
+            this.paid.Click += new System.EventHandler(this.label8_Click);
             // 
             // txt_paid
             // 
-            this.txt_paid.Location = new System.Drawing.Point(547, 475);
-            this.txt_paid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_paid.Location = new System.Drawing.Point(531, 503);
             this.txt_paid.Name = "txt_paid";
-            this.txt_paid.Size = new System.Drawing.Size(92, 22);
-            this.txt_paid.TabIndex = 21;
+            this.txt_paid.Size = new System.Drawing.Size(70, 22);
+            this.txt_paid.TabIndex = 19;
+            this.txt_paid.TextChanged += new System.EventHandler(this.txt_paid_TextChanged);
+            // 
+            // balance
+            // 
+            this.balance.AutoSize = true;
+            this.balance.Location = new System.Drawing.Point(447, 549);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(59, 17);
+            this.balance.TabIndex = 22;
+            this.balance.Text = "Balance\r\n";
             // 
             // txt_balance
             // 
-            this.txt_balance.Location = new System.Drawing.Point(547, 505);
-            this.txt_balance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_balance.Location = new System.Drawing.Point(531, 544);
             this.txt_balance.Name = "txt_balance";
-            this.txt_balance.Size = new System.Drawing.Size(92, 22);
-            this.txt_balance.TabIndex = 22;
+            this.txt_balance.Size = new System.Drawing.Size(70, 22);
+            this.txt_balance.TabIndex = 21;
+            // 
+            // removeitem
+            // 
+            this.removeitem.Location = new System.Drawing.Point(479, 221);
+            this.removeitem.Name = "removeitem";
+            this.removeitem.Size = new System.Drawing.Size(100, 32);
+            this.removeitem.TabIndex = 23;
+            this.removeitem.Text = "Remove Item\r\n";
+            this.removeitem.UseVisualStyleBackColor = true;
+            this.removeitem.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 609);
+            this.ClientSize = new System.Drawing.Size(624, 600);
+            this.Controls.Add(this.removeitem);
+            this.Controls.Add(this.balance);
             this.Controls.Add(this.txt_balance);
+            this.Controls.Add(this.paid);
             this.Controls.Add(this.txt_paid);
+            this.Controls.Add(this.Net);
             this.Controls.Add(this.txt_net);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.discount);
             this.Controls.Add(this.txt_discount);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.text_sub);
+            this.Controls.Add(this.subtotal);
+            this.Controls.Add(this.txt_subtotal);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.additem);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.txt_total);
+            this.Controls.Add(this.Quantity);
+            this.Controls.Add(this.txt_qty);
+            this.Controls.Add(this.price);
             this.Controls.Add(this.txt_price);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.toys);
+            this.Controls.Add(this.sweets);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_items);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "csharpshop";
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,30 +346,31 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmb_items;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton sweets;
+        private System.Windows.Forms.RadioButton toys;
         private System.Windows.Forms.TextBox txt_price;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label price;
+        private System.Windows.Forms.Label Quantity;
+        private System.Windows.Forms.TextBox txt_qty;
+        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.Button additem;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox txt_subtotal;
+        private System.Windows.Forms.Label subtotal;
+        private System.Windows.Forms.Label discount;
+        private System.Windows.Forms.TextBox txt_discount;
+        private System.Windows.Forms.Label Net;
+        private System.Windows.Forms.TextBox txt_net;
+        private System.Windows.Forms.Label paid;
+        private System.Windows.Forms.TextBox txt_paid;
+        private System.Windows.Forms.Label balance;
+        private System.Windows.Forms.TextBox txt_balance;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox text_sub;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_discount;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_net;
-        private System.Windows.Forms.TextBox txt_paid;
-        private System.Windows.Forms.TextBox txt_balance;
+        private System.Windows.Forms.Button removeitem;
     }
 }
 
